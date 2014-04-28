@@ -1,0 +1,40 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Chunk.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Chunk.cs" Line="144" Column="3" />
+      <File FileName="Assets\Scripts\World.cs" Line="22" Column="5" />
+      <File FileName="Assets\Scripts\Noise.cs" Line="23" Column="23" />
+      <File FileName="Assets\Scripts\ModifyTerrain.cs" Line="25" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Scripts" expanded="True">
+              <Node name="Chunk.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>x</Value>
+          <Value>y</Value>
+          <Value>z</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\Scripts\Chunk.cs" line="149" offsetX="466" offsetY="2325" expression="x" liveUpdate="False" />
+    <Watch file="Assets\Scripts\Chunk.cs" line="150" offsetX="473" offsetY="2352" expression="y" liveUpdate="False" />
+    <Watch file="Assets\Scripts\Chunk.cs" line="151" offsetX="479" offsetY="2377" expression="z" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>
