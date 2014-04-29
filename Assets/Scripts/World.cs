@@ -41,9 +41,11 @@ public class World : MonoBehaviour {
 		for (int x=0; x<chunks.GetLength(0); x++){
 			for (int y=0; y<chunks.GetLength(1); y++){
 				for (int z=0; z<chunks.GetLength(2); z++){
-					GameObject newChunk= Instantiate(chunk,new Vector3(x*chunkSize-0.5f,
-					                                                   y*chunkSize+0.5f,z*chunkSize-0.5f),new Quaternion(0,0,0,0)) as GameObject;
-							
+					GameObject newChunk= Instantiate(chunk,new Vector3(	x*chunkSize - 0.5f,
+					                                                   	y*chunkSize + 0.5f,
+																		z*chunkSize - 0.5f),
+																		new Quaternion(0,0,0,0)) as GameObject;
+					newChunk.transform.parent = transform;
 					chunks[x,y,z] = newChunk.GetComponent("Chunk") as Chunk;
 					chunks[x,y,z].chunkId = chunkCount;
 					chunks[x,y,z].worldGO=gameObject;
@@ -63,8 +65,8 @@ public class World : MonoBehaviour {
 	}
 
 	public byte Block(int x, int y, int z){
-		
 		if( x>=worldX || x<0 || y>=worldY || y<0 || z>=worldZ || z<0){
+		//if( x>=worldX || x<0 || y>=worldY || y<0 || z>=worldZ || z<0){
 			return (byte) 1;
 		}
 		
@@ -74,8 +76,10 @@ public class World : MonoBehaviour {
 		for (int y=0; y<chunks.GetLength(1); y++) {
 				
 			//Create a temporary Gameobject for the new chunk instead of using chunks[x,y,z]
-			GameObject newChunk = Instantiate (chunk, new Vector3 (x * chunkSize - 0.5f,
-			                                                       y * chunkSize + 0.5f, z * chunkSize - 0.5f), new Quaternion (0, 0, 0, 0)) as GameObject;
+			GameObject newChunk = Instantiate (chunk, new Vector3 (	x * chunkSize - 0.5f,
+			                                                       	y * chunkSize + 0.5f, 
+																	z * chunkSize - 0.5f), 
+																	new Quaternion (0, 0, 0, 0)) as GameObject;
 			
 			chunks [x, y, z] = newChunk.GetComponent ("Chunk") as Chunk;
 			chunks [x, y, z].worldGO = gameObject;
